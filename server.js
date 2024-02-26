@@ -9,12 +9,12 @@ app.get("/cadastrar/produto", (req, res) => {
     res.sendFile(__dirname + '/cadastrar-prod.html')
 })
 
-app.get("/pesquisar/produto/modelo", (req, res) => {
-    res.sendFile(__dirname + '/modelo-prod.html')
+app.get("/pesquisar/produto/modelo/:prod", (req, res) => {
+    res.sendFile(__dirname + '/modelo-prod.html/' + req.params.prod)
 })
 
-app.get("/contato/sac/produto/", (req, res) => {
-    res.sendFile(__dirname + '/contato-sac.html')
+app.get("/contato/sac/produto/:prod", (req, res) => {
+    res.sendFile(__dirname + '/contato-sac.html/' + req.params.prod)
 })
 
 app.get("/cadastrar/:item/:name/:price/:qtdd", (req, res) => {
