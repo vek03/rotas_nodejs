@@ -5,8 +5,16 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get("/contato", (req, res) => {
-    res.send('Página de Contato')
+app.get("/cadastrar/produto", (req, res) => {
+    res.sendFile(__dirname + '/cadastrar-prod.html')
+})
+
+app.get("/pesquisar/produto/modelo", (req, res) => {
+    res.sendFile(__dirname + '/modelo-prod.html')
+})
+
+app.get("/contato/sac/produto/", (req, res) => {
+    res.sendFile(__dirname + '/contato-sac.html')
 })
 
 app.get("/cadastrar/:item/:name/:price/:qtdd", (req, res) => {
